@@ -1,0 +1,19 @@
+CREATE TABLE Note (
+    id   TEXT NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    type TEXT NOT NULL,
+    status INTEGER NOT NULL
+);
+
+insertNote:
+INSERT OR REPLACE INTO Note(id, name, type, status)
+VALUES(?, ?, ?, ?);
+
+removeAllNotes:
+DELETE FROM Note;
+
+selectNoteById:
+SELECT * FROM Note WHERE id = ?;
+
+selectAllNote:
+SELECT * FROM Note;
